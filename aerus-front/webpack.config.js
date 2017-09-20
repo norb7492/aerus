@@ -14,7 +14,7 @@ module.exports = {
       exclude: /node_modules/
     }, 
     {
-      test: /\.scss$/,
+      test: /\.scss|css$/,
       use: [
         'style-loader',
         'css-loader',
@@ -38,7 +38,7 @@ module.exports = {
     hot: true,
     port: 4200,
     stats: "errors-only",
-    open: true
+    open: false
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),

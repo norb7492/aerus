@@ -25,6 +25,9 @@
     "webpack-dev-server": "^2.8.2"
   },
   "dependencies": {
+    "classnames": "^2.2.5",
+    "font-awesome": "^4.7.0",
+    "primereact": "^1.0.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1"
   }
