@@ -12,8 +12,9 @@
 .Login .flexContainer .loginBox .loginMenu{
     display: flex;
 }
-.Login .flexContainer .loginBox .loginMenu .lognTitle{ 
-        margin-right: 60px;
+.Login .flexContainer .loginBox .loginMenu .loginTitle{ 
+       flex-grow: 2;
+       text-align: center;
   }
 @media screen and(max-width: 768px) {
         .Login .flexContainer .loginBox .loginMenu{
