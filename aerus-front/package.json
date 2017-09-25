@@ -27,6 +27,7 @@
     "webpack-dev-server": "^2.8.2"
   },
   "dependencies": {
+    "browserify-fs": "^1.0.0",
     "classnames": "^2.2.5",
     "font-awesome": "^4.7.0",
     "primereact": "^1.0.0",

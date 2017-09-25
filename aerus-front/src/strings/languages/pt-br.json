@@ -1,0 +1,8 @@
+{
+    "login": {
+        "login": "Login",
+        "username": "Usuário",
+        "password": "Senha",
+        "loginButton": "Entrar"
+    }
+}
