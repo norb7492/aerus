@@ -1,0 +1,8 @@
+{
+"languagesAvaiable":[
+        {"label": "English", "value": "eng-en"},
+        {"label": "Deutsch", "value": "de"},
+        {"label": "Português", "value": "pt-br"},
+        {"label": "日本語", "value": "jp"}
+    ]
+}
