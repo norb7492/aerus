@@ -10,7 +10,7 @@ import { Dropdown } from 'primereact/components/dropdown/Dropdown';
 import LoginForm from './components/login-form';
 
 export default class Login extends Component {
-
+  
   constructor() {
     super();
   }
@@ -52,7 +52,7 @@ export default class Login extends Component {
   }
   render() {
     return (
-      <div className="Login">
+      <div className="Login" lang={this.state.selectedLanguage}>
         <div className="Container">
           <div className="ui-g">
             <div className="ui-g-4"></div>

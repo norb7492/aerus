@@ -2,7 +2,14 @@
 .Login .Container{
     width: 600px;
     height: 260px;
-    background: blue;
+    background: lightgrey;
     box-shadow: 10px 10px 5px #888888
 }
 
+.Login {
+    font-size: 15px;
+}
+
+*:lang(jp) { 
+    font-size: 14px;
+}
