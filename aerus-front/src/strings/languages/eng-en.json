@@ -3,6 +3,8 @@
         "login": "Login",
         "username": "Username",
         "password": "Password",
-        "loginButton": "Login"
+        "loginButton": "Login",        
+        "usernameEmpty": "Please put your username",
+        "passwordEmpty": "Please put your password"
     }
 }

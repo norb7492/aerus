@@ -1,8 +1,10 @@
 {
     "login": {
         "login": "ログイン",
-        "username": "ユーザー名",
+        "username": "ユーザー",
         "password": "パスワード",
-        "loginButton": "ログイン"
+        "loginButton": "ログイン",
+        "usernameEmpty": "ユーザーを入力してください",
+        "passwordEmpty": "パスワードを入力してください"
     }
 }

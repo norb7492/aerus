@@ -10,7 +10,7 @@ import { Dropdown } from 'primereact/components/dropdown/Dropdown';
 import LoginForm from './components/login-form';
 
 export default class Login extends Component {
-  
+
   constructor() {
     super();
   }
@@ -59,7 +59,12 @@ export default class Login extends Component {
             <div className="ui-g-4"><p className="loginTitle">{LanguagesAdapter.translate('login', this.state.selectedLanguage, 'login')}</p></div>
             <div className="ui-g-4"><Dropdown value={this.state.language} options={Languages.languagesAvaiable} onChange={(e) => this.changeLanguage(e)} style={{ width: '150px' }} /></div>
           </div>
-          <LoginForm username={LanguagesAdapter.translate('username', this.state.selectedLanguage, 'login')} password={LanguagesAdapter.translate('password', this.state.selectedLanguage, 'login')} loginButton={LanguagesAdapter.translate('loginButton', this.state.selectedLanguage, 'login')}/>
+          <LoginForm username={LanguagesAdapter.translate('username', this.state.selectedLanguage, 'login')}
+            password={LanguagesAdapter.translate('password', this.state.selectedLanguage, 'login')}
+            loginButton={LanguagesAdapter.translate('loginButton', this.state.selectedLanguage, 'login')} 
+            usernameEmpty={LanguagesAdapter.translate('usernameEmpty', this.state.selectedLanguage, 'login')}
+            passwordEmpty={LanguagesAdapter.translate('passwordEmpty', this.state.selectedLanguage, 'login')}
+            />
         </div>
       </div>
     );

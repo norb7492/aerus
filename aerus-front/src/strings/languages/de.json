@@ -3,6 +3,8 @@
         "login": "Login",
         "username": "Username",
         "password": "Password",
-        "loginButton": "Login"
+        "loginButton": "Login",
+        "usernameEmpty": "Bitte geben Sie Ihren Username ein",
+        "passwordEmpty": "Bitte geben Sie Ihr Password ein"
     }
 }

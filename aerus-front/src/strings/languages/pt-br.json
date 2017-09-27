@@ -3,6 +3,8 @@
         "login": "Login",
         "username": "Usuário",
         "password": "Senha",
-        "loginButton": "Entrar"
+        "loginButton": "Entrar",
+        "usernameEmpty": "Por favor colocar o usuário",
+        "passwordEmpty": "Por favor colocar a senha"
     }
 }
