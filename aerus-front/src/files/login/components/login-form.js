@@ -11,8 +11,6 @@ export default class LoginForm extends Component {
         password: '',
         usernameEmpty: false,
         passwordEmpty: false,
-        usernameSmall: true,
-        passwordSmall: true,
         buttonHide: true
     }
 
@@ -20,23 +18,16 @@ export default class LoginForm extends Component {
         e.preventDefault();
         this.validate();
 
+        console.log(this.state.usernameEmpty);
     }
 
-    formValidation(e, formInput) {
-        switch (formInput) {
-            case 'username':
-                this.setState({
-                    username: e.target.value
-                });
-                break;
-            case 'password':
-                this.setState({
-                    password: e.target.value
-                });
-                break;
-        }
+    onChange(e, formInput) {
+        this.setState({
+            [formInput]: e.target.value
+        });
     }
     validate() {
+
         if (Utils.isEmptyOrNull(this.state.username)) {
             this.setState({
                 usernameEmpty: true
@@ -55,7 +46,6 @@ export default class LoginForm extends Component {
                 passwordEmpty: false
             });
         }
-
     }
 
     render() {
@@ -64,14 +54,14 @@ export default class LoginForm extends Component {
                 <form onSubmit={(e) => this.login(e)}>
                     <div className="ui-g">
                         <div className="ui-g-3"><label>{this.props.username}</label></div>
-                        <div className="ui-g-5"><InputText type="text" onChange={(e) => this.formValidation(e, 'username')} />
+                        <div className="ui-g-5"><InputText type="text" onChange={(e) => this.onChange(e, 'username')} />
                             <br />
                             {this.state.usernameEmpty ? <label>{this.props.usernameEmpty}</label> : ''}
                         </div>
                     </div>
                     <div className="ui-g">
                         <div className="ui-g-3"><label>{this.props.password}</label></div>
-                        <div className="ui-g-5"><InputText type="password" onChange={(e) => this.formValidation(e, 'password')} />
+                        <div className="ui-g-5"><InputText type="password" onChange={(e) => this.onChange(e, 'password')} />
                             <br />
                             {this.state.passwordEmpty ? <label>{this.props.passwordEmpty}</label> : ''}
                         </div>
