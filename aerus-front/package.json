@@ -17,6 +17,7 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.7",
+    "directory-named-webpack-plugin": "^2.2.3",
     "file-loader": "^0.11.2",
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6",
@@ -30,8 +31,9 @@
     "browserify-fs": "^1.0.0",
     "classnames": "^2.2.5",
     "font-awesome": "^4.7.0",
-    "primereact": "^1.0.0",
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2"
   }
 }

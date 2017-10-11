@@ -1,12 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Login from './files/login/login';
+import Main from './files/pages/main/main';
 
-import 'font-awesome/css/font-awesome.css';
-import 'primereact/resources/themes/omega/theme.css';
-import './primefaces/primereact.scss';
-
-/* import 'primereact/resources/primereact.min.css'; */
-//minified css
-
-ReactDOM.render(<Login/>, document.getElementById('root'));
+ReactDOM.render(<Main/>, document.getElementById('root'));
