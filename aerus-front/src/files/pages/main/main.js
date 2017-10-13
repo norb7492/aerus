@@ -4,11 +4,12 @@ import Navbar from './../../components/navbar/navbar';
 import Footer from './../../components/footer/footer';
 import './main.scss';
 
+
 export default class Main extends Component {
 
     render() {
         return (
-            <div className="content">
+            <div className="container">
                 <Header />
                 <Navbar />
                 <main>Main</main>

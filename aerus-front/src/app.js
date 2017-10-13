@@ -2,4 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Main from './files/pages/main/main';
 
-ReactDOM.render(<Main/>, document.getElementById('root'));
+
+import 'antd/dist/antd.css';
+import './style.scss';
+
+ReactDOM.render(<Main />, document.getElementById('root'));

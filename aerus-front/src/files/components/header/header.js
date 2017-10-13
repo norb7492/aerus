@@ -1,9 +1,10 @@
 import React from 'react';
+import './header.scss';
 
 const Header = () => {
     return(
         <header>
-            Header
+            <h1 className="headerTitle">Aerus</h1>
         </header>    
     )
 }
