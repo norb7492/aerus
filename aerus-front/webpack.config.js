@@ -41,9 +41,13 @@ module.exports = {
     hot: true,
     port: 4200,
     stats: "errors-only",
-    open: false
+    open: false,
+    historyApiFallback: true
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.ProvidePlugin({
+      "React": "react"
+  }),
   ],
 };

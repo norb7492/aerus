@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
 import Header from './../../components/header/header';
-import Navbar from './../../components/navbar/navbar';
 import Footer from './../../components/footer/footer';
+import Navbar  from './../../components/navbar/navbar';
+import MainRouter  from './../../routers/mainRouter'; 
 import './main.scss';
 
 
-export default class Main extends Component {
+export default class Main extends React.Component {
 
     render() {
+        console.log(Navbar);
         return (
             <div className="container">
                 <Header />
-                <Navbar />
-                <main>Main</main>
+                 <MainRouter /> 
                 <Footer />
             </div>
         )
