@@ -7,27 +7,24 @@ const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 
 
-export default class Navbar extends React.Component {
+import {connect} from 'react-redux';
+import {setTab} from './actionNavbar';
+
+class Navbar extends React.Component {
 
     constructor() {
         super();
     }
-    state = {
-        current: 'home',
-    }
+
+
     handleClick = (e) => {
         console.log('click ', e);
         this.setState({
             current: e.key,
         });
+
+        this.props.dispatch(setTab(e.key));
     }
-
-    /*  oddEvent = (match, location) => {
-            if (!match) {
-              return false
-            }
-        } */
-
 
     handleButtonClick(e) {
         message.info('Click on left button.');
@@ -41,18 +38,19 @@ export default class Navbar extends React.Component {
 
     menu = (
         <Menu onClick={this.handleMenuClick}>
-            <Menu.Item key="1">1st menu item</Menu.Item>
-            <Menu.Item key="2">2nd menu item</Menu.Item>
-            <Menu.Item key="3">3d menu item</Menu.Item>
+            <Menu.Item key="1">English</Menu.Item>
+            <Menu.Item key="2">Deutsch</Menu.Item>
+            <Menu.Item key="3">Português</Menu.Item>
+            <Menu.Item key="4">日本語</Menu.Item>
         </Menu>
     );
     render() {
+        console.log('props', this.props.current);
         return (
             <nav>
-
                 <Menu
                     onClick={this.handleClick}
-                    selectedKeys={[this.state.current]}
+                    selectedKeys={[this.props.current]}
                     mode="horizontal"
                 >
                     <Menu.Item key="home">
@@ -70,3 +68,10 @@ export default class Navbar extends React.Component {
     }
 }
 
+const mapStateToProps = (state) => {
+  console.log('Navbar',state.reducerNavbar);
+  return {
+    current: state.reducerNavbar.current
+  }
+}
+export default connect(mapStateToProps)(Navbar);
