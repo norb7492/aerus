@@ -1,15 +1,14 @@
 const defaultState = {
-    current: 'home',
     language: 'eng-en'
 };
 export default (state = defaultState, action) => {
     switch (action.type) {
-        case 'SET_TAB':
+        case 'SET_LANGUAGE':
             return {
                 ...state,
-                current: action.current
-            };
-        break;
+                language: action.language
+            }
+        break;    
         default:
             return state;
             break;

@@ -6,5 +6,10 @@
         "loginButton": "ログイン",
         "usernameEmpty": "ユーザーを入力してください",
         "passwordEmpty": "パスワードを入力してください"
+    },    
+    "navBar": {
+        "selectedLanguage": "日本語",
+        "home": "ホーム",
+        "about": "アバウト"
     }
 }

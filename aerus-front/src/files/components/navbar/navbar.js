@@ -7,33 +7,46 @@ const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 
 
-import {connect} from 'react-redux';
-import {setTab} from './actionNavbar';
+import { connect } from 'react-redux';
+import { setTab } from './actionNavbar';
+
+const translate =  Translator.translate;
+const setLanguage = ActionLanguage.setLanguage;
 
 class Navbar extends React.Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
     }
-
 
     handleClick = (e) => {
         console.log('click ', e);
-        this.setState({
-            current: e.key,
-        });
-
         this.props.dispatch(setTab(e.key));
     }
 
-    handleButtonClick(e) {
-        message.info('Click on left button.');
+    handleButtonClick = (e) =>{
         console.log('click left button', e);
     }
 
-    handleMenuClick(e) {
-        message.info('Click on menu item.');
-        console.log('click', e);
+    handleMenuClick = (e) =>{
+        switch (parseInt(e.key)) {
+            case 1:
+                this.props.dispatch(setLanguage('eng-en'));
+                message.info('English Selected');
+                break;
+            case 2:
+                this.props.dispatch(setLanguage('de'));
+                message.info('German Selected');
+                break;
+            case 3:
+                this.props.dispatch(setLanguage('pt-br'));
+                message.info('Portuguese Selected');
+                break;
+            case 4:
+                this.props.dispatch(setLanguage('jp'));
+                message.info('Japanese Selected');
+                break;
+        }
     }
 
     menu = (
@@ -54,24 +67,25 @@ class Navbar extends React.Component {
                     mode="horizontal"
                 >
                     <Menu.Item key="home">
-                        <NavLink to="/" exact={true}>Home</NavLink>
+                        <NavLink to="/" exact={true}>{translate('home', this.props.language, 'navBar')}</NavLink>
                     </Menu.Item>
                     <Menu.Item key="about">
-                        <NavLink to="/about">About</NavLink>
+                        <NavLink to="/about">{translate('about', this.props.language, 'navBar')}</NavLink>
                     </Menu.Item>
-                    <Dropdown.Button onClick={this.handleButtonClick} overlay={this.menu}>
-                        Dropdown
-                     </Dropdown.Button>
                 </Menu>
+                <Dropdown.Button onClick={this.handleButtonClick} overlay={this.menu}>
+                        {translate('selectedLanguage', this.props.language, 'navBar')}
+                </Dropdown.Button>
             </nav>
         )
     }
 }
 
 const mapStateToProps = (state) => {
-  console.log('Navbar',state.reducerNavbar);
-  return {
-    current: state.reducerNavbar.current
-  }
+    console.log('Navbar', state);
+    return {
+        current: state.reducerNavbar.current,
+        language: state.reducerLanguage.language
+    }
 }
 export default connect(mapStateToProps)(Navbar);

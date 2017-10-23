@@ -6,5 +6,10 @@
         "loginButton": "Login",        
         "usernameEmpty": "Please put your username",
         "passwordEmpty": "Please put your password"
+    },
+    "navBar": {
+        "selectedLanguage": "English",
+        "home": "Home",
+        "about": "About"
     }
 }

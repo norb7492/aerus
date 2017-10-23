@@ -6,5 +6,10 @@
         "loginButton": "Login",
         "usernameEmpty": "Bitte geben Sie Ihren Username ein",
         "passwordEmpty": "Bitte geben Sie Ihr Password ein"
+    },    
+    "navBar": {
+        "selectedLanguage": "Deutsch",
+        "home": "Home",
+        "about": "Über"
     }
 }

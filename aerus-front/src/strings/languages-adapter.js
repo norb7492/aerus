@@ -7,9 +7,11 @@ import German from './languages/de';
 import English from './languages/eng-en';
 import Japanese from './languages/jp';
 
-module.exports = {
     
+const Translator = {
     translate(word, language, component){
+        console.log(word, language, component);
+
         if(word == null || language == null || component == null){
             return 'please enter all parameters'
         }else{
@@ -27,7 +29,7 @@ module.exports = {
                 }
             break;
             case 'eng-en':  
-                if(Japanese[component][word]){
+                if(English[component][word]){
                     return English[component][word];
                 }else{
                     return `word ${word} not found`;
@@ -45,5 +47,7 @@ module.exports = {
                 return 'language not found';
         }
       }
-    }
+
+    }   
 }
+module.exports = Translator;
