@@ -11,5 +11,12 @@
         "selectedLanguage": "日本語",
         "home": "ホーム",
         "about": "アバウト"
+    },
+    "home":{
+        "homeTitle": "ホーム",
+        "me": "こんちは、ノルベルトです"
+    },
+    "about":{
+        "aboutTitle": "アバウト"
     }
 }

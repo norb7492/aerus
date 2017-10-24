@@ -11,5 +11,12 @@
         "selectedLanguage": "Português",
         "home": "Home",
         "about": "Sobre"
+    },
+    "home":{
+        "homeTitle": "Home",
+        "me": "Olá sou o Norbert"
+    },
+    "about":{
+        "aboutTitle": "Sobre"
     }
 }

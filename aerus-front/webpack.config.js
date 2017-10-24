@@ -55,7 +55,7 @@ module.exports = {
     new webpack.ProvidePlugin({
       "React": "react",
       "Translator": 'translator',
-      "ActionLanguage": 'actionLanguage'
+      "ActionLanguage": 'actionLanguage',
   }),
   ],
 };
