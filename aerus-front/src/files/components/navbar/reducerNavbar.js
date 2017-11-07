@@ -1,6 +1,5 @@
 const defaultState = {
     current: 'home',
-    language: 'eng-en'
 };
 export default (state = defaultState, action) => {
     switch (action.type) {

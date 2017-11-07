@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev-server": "webpack-dev-server",
-    "start": "npm run dev-server"
+    "start": "npm run dev-server",
+    "test": "jest --watch"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +22,7 @@
     "css-loader": "^0.28.7",
     "directory-named-webpack-plugin": "^2.2.3",
     "file-loader": "^0.11.2",
+    "jest": "^21.2.1",
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6",
     "scss-loader": "0.0.1",
